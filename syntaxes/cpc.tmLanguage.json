@@ -1,0 +1,44 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Cooperating Proof Calculus",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.commands.cpc",
+				"match": "[\\s\\(\\):](assume|assume-push|declare-consts|declare-parameterized-const|declare-rule|define|include|program|reference|step|step-pop|lambda)[\\s\\(\\)]"
+			},{
+				"name": "keyword.boolean-literals.cpc",
+				"match": "(?:(?<=^)|(?<=[\\s()]))(?:false|true)(?:(?=$)|(?=[\\s()]))"
+			},{
+				"name": "keyword.boolean-operators.cpc",
+				"match": "\\b(and|not|or)\\s"
+			},{
+				"name": "keyword.commands.smt2-query.cpc",
+				"match": "\\b(declare-const|declare-datatype|declare-datatypes|echo|exit|set-option|pop|push|reset|assert|declare-fun|declare-sort|define-const|define-fun|define-sort|check-sat|check-sat-assuming|set-logic|set-info)\\b"
+			},{
+				"name": "keyword.arguments.cpc",
+				"match": "\\s:([^:\\s]+)\\s"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.cpc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.cpc",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "text.cpc"
+}

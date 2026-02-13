@@ -1,0 +1,25 @@
+{
+  "name": "cpc-syntax-highlighting",
+  "displayName": "CPC Syntax Highlighting",
+  "description": "Offers syntax highlighting and formatting for the Cooperating Proof Calculus format",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.109.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "cpc",
+      "aliases": ["Cooperating Proof Calculus", "cpc"],
+      "extensions": [".cpc",".eo"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "cpc",
+      "scopeName": "text.cpc",
+      "path": "./syntaxes/cpc.tmLanguage.json"
+    }]
+  }
+}
