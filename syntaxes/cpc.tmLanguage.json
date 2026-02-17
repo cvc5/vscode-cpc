@@ -24,7 +24,7 @@
 				"name": "keyword.commands.smt2-query.cpc",
 				"match": "\\b(declare-const|declare-datatype|declare-datatypes|echo|exit|set-option|pop|push|reset|assert|declare-fun|declare-sort|define-const|define-fun|define-sort|check-sat|check-sat-assuming|set-logic|set-info)\\b"
 			},{
-				"name": "keyword.arguments.cpc",
+				"name": "keyword.attributes.cpc",
 				"match": "\\s:([^:\\s]+)\\s"
 			}]
 		},
