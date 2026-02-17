@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.commands.cpc",
-				"match": "[\\s\\(\\):](assume|assume-push|declare-consts|declare-parameterized-const|declare-rule|define|include|program|reference|step|step-pop|lambda)[\\s\\(\\)]"
+				"match": "[\\s\\(\\)](assume|assume-push|declare-consts|declare-parameterized-const|declare-rule|define|include|program|reference|step|step-pop|lambda)[\\s\\(\\)]"
 			},{
 				"name": "keyword.boolean-literals.cpc",
 				"match": "(?:(?<=^)|(?<=[\\s()]))(?:false|true)(?:(?=$)|(?=[\\s()]))"
