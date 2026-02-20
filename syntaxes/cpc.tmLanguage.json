@@ -7,9 +7,22 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
 		}
 	],
 	"repository": {
+		"comments": {
+			"patterns": [ {
+				"name": "comment.line.single.cpc",
+				"match": ";.*$"
+			},{
+				"name": "comment.line.double.cpc",
+				"match": ";;.*$"
+			}]
+			
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.commands.cpc",
