@@ -17,9 +17,6 @@
 			"patterns": [ {
 				"name": "comment.line.single.cpc",
 				"match": ";.*$"
-			},{
-				"name": "comment.line.double.cpc",
-				"match": ";;.*$"
 			}]
 			
 		},
