@@ -10,9 +10,37 @@
 		},
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#variables"
 		}
 	],
 	"repository": {
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.decimal.cpc",
+					"match": "\\b[0-9]+\\b"
+				},{
+					"name": "constant.numeric.hexadecimal.cpc",
+					"match": "#x[0-9a-fA-F]+\\b"
+				},{
+					"name": "constant.numeric.binary.cpc",
+					"match": "#b[01]+\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.argument.cpc",
+					"match": "\\s:([^:\\s]+)\\s"
+				}
+			]
+		},
 		"comments": {
 			"patterns": [ {
 				"name": "comment.line.single.cpc",
@@ -34,8 +62,11 @@
 				"name": "keyword.commands.smt2-query.cpc",
 				"match": "\\b(declare-const|declare-datatype|declare-datatypes|echo|exit|set-option|pop|push|reset|assert|declare-fun|declare-sort|define-const|define-fun|define-sort|check-sat|check-sat-assuming|set-logic|set-info)\\b"
 			},{
-				"name": "keyword.attributes.cpc",
-				"match": "\\s:([^:\\s]+)\\s"
+				"name": "keyword.literal-types.cpc",
+				"match": "<.+>"
+			},{
+				"name": "keyword.function-definition.cpc",
+				"match": "->"
 			}]
 		},
 		"strings": {
